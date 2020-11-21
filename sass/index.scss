@@ -1,98 +1,226 @@
-// 变量 $+变量名
-$w:400px;
-$h:200px;
-$c:red;
-$len:50%*10; // 500%
-/* 标题样式 */
-h1{
-  width: $w;
-  height: $h;
-  color: $c;
-  background-color: #ccc;
+html,body{
+    width: 100%;
+}
+.container{
+    width: 1090px;
+    margin: 0 auto;
+}
+.container-fluid{
+    width: 100%;
+    min-width: 1090px;
 }
 
-// sass中的注释有两种
-// 1. // sass有的注释，不会被编译到css文件中
-// /* xxx */ 会被编译到css文件中
-
-// 嵌套语法
 .box{
-  width: $w;
-  background-color: lightblue;
-  h2{
-    font-size: 30px;
-    color: blue;
-  }
-  .show{
-    width: 300px;
-    height: 100px;
-    span{
-      color: red;
+    width: 500px;height: 500px;
+    border: 1px solid black;
+    background-image:url(./img/2.jpg);
+    background-position:center center;
+}
+
+#mask{
+    width: 100%;
+    height:100%;
+    background-color: rgba(0,0,0,.5);
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 90;
+    // display:none
+}
+
+#login{
+    width: 384px;
+    height: 488px;
+    background-color:#fff;
+    position:fixed;
+    left: 50%;
+    top: 50%;
+    margin-left:-198px;
+    margin-top:-240px;
+    z-index:99;
+    border: 1px solid #f5f3ef;
+    padding: 0 42px;
+    box-sizing: border-box;
+    .close{
+        font-size: 36px;
+        color: #d8cacc;
+        position:absolute;
+        right: 12px;
+        top: 8px;
+        cursor:pointer;
     }
-    p{
-      color: yellow;
+    .login{
+        font-size: 18px;
+        color: #999999;
+        margin-top: 31px;
+        box-sizing:border-box;
+        span{
+            &:hover{
+                color: #333333;
+                line-height:20px;
+            }
+        }
+        .phone{
+            margin:0 56px 0 14px;
+        }
+        .email{
+            margin-left: 53px;
+        }
     }
-  }
+    .verify{
+        font-size: 12px;
+        color: #666666;
+        line-height:38px;
+        margin-top: 13px;
+        cursor: pointer;
+        text-align: right;
+        &:hover{
+            color: #b4a078;
+        }
+    }
 }
 
-// & 指向父选择器
-a{
-  color: blue;
-  &:hover{
-    color: red;
-  }
+#title{
+    background-color: #333333;
+    height: 36px;
+    .title_inner{
+        &_inform{
+            height: 36px;
+            line-height: 36px;
+            a{
+                font-size: 12px;
+                color: #cc9756;
+                text-decoration: underline;
+                &:hover{
+                    color: #ffffff;
+                }
+            }
+            img{
+                cursor: pointer;
+                margin-right: 10px;
+            }
+        }
+        &_nav{
+            height: 36px;
+            line-height: 36px;
+            .bg{
+                display: inline-block;
+                width: 1px;
+                height: 16px;
+                background-color: rgba(255,255,255,.1);
+                vertical-align: middle;
+                cursor:pointer
+            }
+            ul{
+                height: 100%;
+                line-height: 36px;
+                .list{
+                    position:relative;
+                    &:hover{
+                        div{
+                            display:block
+                        }
+                    }
+                    &>div{
+                        width: 80px;
+                        border: 1px solid #dddddd;
+                        position:absolute;
+                        left: 0;
+                        top: 36px;
+                        display:none;
+                        &::after{
+                            content: '';
+                            position:absolute;
+                            border-width: 7px;
+                            border-style: solid;
+                            border-color: transparent transparent #fffdf5 transparent;
+                            top:-14px;
+                            left: 35px;
+                        }
+                        div{
+                            text-align:center;
+                            margin: 0 auto;
+                            box-sizing:border-box;
+                            background:white;
+                            a{
+                                font-size: 12px;
+                                color: #999999;
+                                display: block;
+                                width: 55px;
+                                margin: 0 auto;
+                                border-bottom: 1px solid #dddddd;
+                                line-height:38px;
+                                padding-top: 4px;
+                                height: 41px;
+                                &:hover{
+                                    color: #b4a078;
+                                }
+                            }
+                            .last{
+                                border:0;
+                            }
+                        }
+                    }
+                }
+                li{
+                    height: 100%;
+                    float: left;
+                    a{
+                        color: #cccccc;
+                        font-size: 12px;
+                        margin-left: 10px;
+                        margin-right: 10px;
+                        &:hover{
+                            color: #fff;
+                        }
+                        img{
+                            margin-right: 10px;
+                        }
+                        i{
+                            color: rgba(255,255,255,.4);   
+                            transform: rotateZ(90deg);
+                            display:inline-block;
+                            vertical-align:middle;
+                            font-size: 14px;
+                            position:relative;
+                            left:10px;
+                            margin-right: 10px;
+                       }
+                    }
+                }
+                .app{
+                    position: relative;
+                    &:hover{
+                        div{
+                            display:block
+                        }
+                    }
+                    div{
+                        display:none;
+                        padding: 10px;
+                        padding-bottom: 0;
+                        border: 1px solid #dddddd;
+                        position:absolute;
+                        left: -42px;
+                        top: 36px;
+                        &::after{
+                            content: '';
+                            position:absolute;
+                            border-width: 7px;
+                            border-style: solid;
+                            border-color: transparent transparent #fffdf5 transparent;
+                            top:-14px;
+                            left: 63px;
+                        }
+                        p{
+                            font-size: 12px;
+                            color: #b4a078;
+                            text-align:center;
+                            line-height:24px;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
-.content{
-  width: 500px;
-  &-title{
-    color: red;
-  }
-  &-main{
-    color: blue;
-  }
-}
-
-// @import 引入外部样式
-@import 'header.scss';
-
-// @mixin 混合器
-@mixin nostyle {
-  list-style: none;
-  li{
-    padding: 0;
-    color: blue;
-  }
-}
-.list{
-  width: 500px;
-  @include nostyle;
-}
-
-// 混合器传参
-@mixin common($w,$h,$c) {
-  width: $w;
-  height: $h;
-  color: $c;
-}
-.box1{
-  background-color: #ccc;
-  @include common(500px,200px,red);
-}
-.box2{
-  padding: 10px;
-  @include common(300px,100px,blue);
-}
-
-// 继承
-.box3{
-  padding: 20px;
-  margin: 10px;
-  font-size: 20px;
-}
-.box4{
-  width: 500px;
-  background: pink;
-  @extend .box3;
-}
-
-
