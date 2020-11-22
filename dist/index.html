@@ -1,56 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../reset.css">
+    <link rel="stylesheet" href="../iconfont/iconfont.css">
     <link rel="stylesheet" href="./css/index.css">
 </head>
 
 <body>
+    <!-- 点击登录后的遮罩 -->
     <div id="mask"></div>
-    <div id="login">
-        <span class="close">X</span>
-        <div class="login">
-            <span class="phone">手机号登录</span>|
-            <span class="email">邮箱登录</span>
-       </div>
-       <p class="verify">使用验证码登录</p>
+    <!-- 点击登录后的遮罩 -->
 
+    <!-- 点击登录后的弹窗 -->
+    <div id="login">
+        <div id="login_inner">
+            <span class="close">X</span>
+            <div class="login">
+                <span class="phone">手机号登录</span>|
+                <span class="email">邮箱登录</span>
+            </div>
+            <p class="verify">使用验证码登录</p>
+            <div class="mobile mb16">
+                <span class="l"><i class="iconfont  iconfont icon-shouji"></i></span>|
+                <input type="search" placeholder='请输入手机号' class="r">
+            </div>
+            <div class="puzzle mb16">
+                <div class="slide l">→</div>
+                向右拖动滑块填充拼图
+            </div>
+            <div class="getverify mb16">
+                <input type="search" placeholder="请输入短信验证码" class="l">
+                <button class="r">获取验证码</button>
+            </div>
+            <div class="shortcut-login">
+                手机号快捷登录
+            </div>
+            <div class="consent">
+                <input type="checkbox">
+                我同意<a href="Javascript:;">《服务条款》</a>和
+                <a href="Javascript:;">《网易隐私政策》</a>
+            </div>
+        </div>
+        <div class="method">
+            <div class="method_left l">
+                <a href="javascript"><i class="iconfont icon-vx"></i></a>
+                <a href="javascript"><i class="iconfont icon-qq"></i></a>
+                <a href="javascript"><i class="iconfont icon-weibo"></i></a>
+                <a href="javascript"><i class="iconfont icon-wangyi"></i></a>
+            </div>
+            <a href="javascript:;" class=" r">
+                遇到问题？
+            </a>
+        </div>
     </div>
+    <!-- 点击登录后的弹窗 -->
+
+    <!-- 顶部 -->
     <div id="title" class="container-fluid">
         <div class="container title_inner clearfix">
             <div class="title_inner_inform l">
                 <img src="./img/trumpet.gif">
-                <a href="#">关于防止近期不法分子冒充客服实施诈骗的公告</a></div>
+                <a href="Javascript:;">关于防止近期不法分子冒充客服实施诈骗的公告</a></div>
             <div class="title_inner_nav r">
                 <ul>
-                    <li class="title_login"><a href="#">登录/注册</a><span class="bg"></span></li>
-                    <li><a href="#">我的订单</a><span class="bg"></span></li>
-                    <li><a href="#">会员</a><span class="bg"></span></li>
-                    <li><a href="#">甄选家</a><span class="bg"></span></li>
-                    <li class="list"><a href="#">企业采购<i>&gt;</i></a><span class="bg"></span>
+                    <li class="title_login"><a href="Javascript:;">登录/注册</a><span class="bg"></span></li>
+                    <li><a href="Javascript:;">我的订单</a><span class="bg"></span></li>
+                    <li><a href="Javascript:;">会员</a><span class="bg"></span></li>
+                    <li><a href="Javascript:;">甄选家</a><span class="bg"></span></li>
+                    <li class="list"><a href="Javascript:;">企业采购<i>&gt;</i></a><span class="bg"></span>
                         <div>
-                            <div><a href="#">企业购</a></div>
-                            <div><a href="#">礼品卡</a></div>
-                            <div><a href="#"  class="last">联系我们</a></div>
+                            <div><a href="Javascript:;">企业购</a></div>
+                            <div><a href="Javascript:;">礼品卡</a></div>
+                            <div><a href="Javascript:;" class="last">联系我们</a></div>
                         </div>
                     </li>
-                    <li class="list"><a href="#">客服服务<i>&gt;</i></a><span class="bg"></span>
+                    <li class="list"><a href="Javascript:;">客服服务<i>&gt;</i></a><span class="bg"></span>
                         <div>
-                            <div><a href="#">在线客服</a></div>
-                            <div><a href="#">帮助中心</a></div>
-                            <div><a href="#">商务合作</a></div>
-                            <div><a href="#" class="last">开放平台</a></div>
+                            <div><a href="Javascript:;">在线客服</a></div>
+                            <div><a href="Javascript:;">帮助中心</a></div>
+                            <div><a href="Javascript:;">商务合作</a></div>
+                            <div><a href="Javascript:;" class="last">开放平台</a></div>
                         </div>
                     </li>
-                    <li class='app'><a href="#"><img src="./img/phone.jpg" alt="">APP</a>'
-                    <div><img src="./img/app.png"><p>下载领大额新人礼包</p></div>
+                    <li class='app'><a href="Javascript:;"><img src="./img/phone.jpg" alt="">APP</a>'
+                        <div><img src="./img/app.png">
+                            <p>下载领大额新人礼包</p>
+                        </div>
                     </li>
                 </ul>
             </div>
         </div>
     </div>
+    <!-- 顶部 -->
 </body>
+
 </html>

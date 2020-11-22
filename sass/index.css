@@ -12,10 +12,27 @@ html, body {
   min-width: 1090px;
 }
 
+input {
+  border: 0;
+  outline: none;
+}
+
+.bg1, #login .mobile span {
+  background-image: url("./img/1.webp");
+}
+
+.bg2 {
+  background-image: url("./img/2.webp");
+}
+
+.bg3 {
+  background-image: url("./img/3.webp");
+}
+
 .box {
   width: 500px;
   height: 500px;
-  border: 1px solid black;
+  border: 3px solid black;
   background-image: url(./img/2.jpg);
   background-position: center center;
 }
@@ -23,7 +40,7 @@ html, body {
 #mask {
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.8);
   position: absolute;
   left: 0;
   top: 0;
@@ -41,8 +58,18 @@ html, body {
   margin-top: -240px;
   z-index: 99;
   border: 1px solid #f5f3ef;
-  padding: 0 42px;
   box-sizing: border-box;
+}
+
+#login #login_inner {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0 42px;
+}
+
+#login .mb16 {
+  margin-bottom: 16px;
+  border: 1px solid #e8e8e8;
 }
 
 #login .close {
@@ -85,6 +112,149 @@ html, body {
 
 #login .verify:hover {
   color: #b4a078;
+}
+
+#login .mobile {
+  height: 36px;
+  line-height: 36px;
+  color: #e8e8e8;
+}
+
+#login .mobile span {
+  width: 35px;
+  height: 24px;
+  margin-top: 7px;
+  line-height: 24px;
+}
+
+#login .mobile span i {
+  font-size: 18px;
+  margin-left: 11px;
+}
+
+#login .mobile input {
+  border: none;
+  outline: none;
+  height: 100%;
+  width: 256px;
+  text-indent: 8px;
+  color: #333;
+}
+
+#login .mobile input::placeholder {
+  color: #e8e8e8;
+  font-size: 14px;
+}
+
+#login .puzzle {
+  height: 38px;
+  line-height: 38px;
+  color: #45494c;
+  text-align: center;
+  font-size: 12px;
+}
+
+#login .puzzle .slide {
+  height: 100%;
+  width: 40px;
+  border-right: 1px solid #dcdedf;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+#login .puzzle .slide:hover {
+  background-color: #1991fa;
+}
+
+#login .getverify {
+  height: 36px;
+  line-height: 36px;
+}
+
+#login .getverify input {
+  width: 208px;
+  height: 100%;
+  text-indent: 8px;
+}
+
+#login .getverify input::placeholder {
+  font-size: 12px;
+  color: #bdbdbd;
+}
+
+#login .getverify button {
+  height: 100%;
+  border: 0;
+  font-size: 14px;
+  color: #333333;
+  cursor: pointer;
+}
+
+#login .getverify button:hover {
+  color: #b4a078;
+}
+
+#login .shortcut-login {
+  margin-top: 40px;
+  height: 48px;
+  background-color: #b4a078;
+  border-radius: 3px;
+  color: #fff;
+  text-align: center;
+  line-height: 48px;
+  margin-bottom: 12px;
+  cursor: pointer;
+}
+
+#login .consent {
+  font-size: 12px;
+  color: #999999;
+  height: 18px;
+  line-height: 18px;
+  margin-bottom: 55px;
+}
+
+#login .consent a {
+  font-size: 12px;
+  color: #333333;
+}
+
+#login .consent input {
+  width: 16px;
+  height: 16px;
+  border: #dddddd;
+  vertical-align: middle;
+  margin-top: -3px;
+}
+
+#login .method {
+  height: 60px;
+  background-color: #f5f3ef;
+  line-height: 60px;
+}
+
+#login .method_left {
+  margin-left: 30px;
+}
+
+#login .method_left a {
+  margin: 0 5px;
+}
+
+#login .method_left a:hover {
+  color: #b19f7e;
+}
+
+#login .method_left a i {
+  font-size: 24px;
+  color: #9b989c;
+}
+
+#login .method > a {
+  font-size: 12px;
+  color: #999999;
+  margin-right: 32px;
 }
 
 #title {
