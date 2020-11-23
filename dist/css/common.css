@@ -284,6 +284,7 @@ input {
         #title .title_inner_nav ul .app:hover div {
           display: block; }
         #title .title_inner_nav ul .app div {
+          background-color: #fff;
           display: none;
           padding: 10px;
           padding-bottom: 0;

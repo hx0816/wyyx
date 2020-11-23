@@ -251,10 +251,130 @@
         }
     }  
 }
-
-
-
-
-
 /* 新品首发 */
+
+/* 人气推荐 */
+#recommend{
+    height: 738px;
+    background-color: #f4f0ea;
+    &_inner{
+        box-sizing:border-box;
+        padding-top: 62px;
+        .recommend{
+            &_text{
+                height: 46px;
+                h2{
+                    margin-right: 33px;
+                    a{
+                        display: block;
+                        font-size: 26px;
+                        line-height: 26px;
+                        font-weight: bold;
+                        color: #333333;
+                    }
+                }
+                p{
+                    line-height: 24px;
+                    font-size: 14px;
+                    color: #333333;
+                    padding: 0 7px;
+                    margin-right: 30px;
+                    cursor: pointer;
+                }
+                .active{
+                    color: #b4a078;
+                    border-bottom: 2px solid #b4a078;
+                }
+                a{
+                    font-size: 14px;
+                    color: #333333;
+                    &:hover{
+                        color: #b4a078;
+                    }
+                }
+            }
+                &_list{
+                    height: 570px;
+                    dt,dd{
+                        background-color: #fff;
+                        box-sizing: border-box;
+                        &:hover{
+                            &>a{
+                                img{
+                                    transform:scale(1.1);
+                                    transform-origin:center center;
+                                }
+                            }
+                        }
+                        &>a{
+                            display: block;
+                            box-sizing: border-box;
+                            img{
+                                transition: 1s;
+                                display: block;margin: 0 auto;
+                            }
+                        }
+                        &>div{
+                            border-top: 1px solid #f4f0ea;
+                            text-align: center;
+                            a{
+                                color: #333333;
+                                font-weight: bold;
+                                display: block;
+                                &:hover{
+                                    color: #b4a08e;
+                                }
+                            }
+                            p{
+                                color: #d7282d;
+                            }
+                        }
+                    }
+                        dt{
+                            width: 390px;
+                            height: 100%;
+                        }
+                    &_img{
+                        height: 400px;
+                        padding-top: 40px;
+                    }
+                    &_text{
+                        a{
+                            width: 170px;
+                            margin: 0 auto;
+                            padding-top: 54px;
+                            line-height: 16px;
+                        }
+                        p{
+                            line-height: 54px;
+                        }
+                    }
+                    dd{
+                        margin-left: 10px;
+                        box-sizing: border-box;
+                        width: 223px;
+                        height: 280px;
+                        margin-bottom: 10px;
+                        div{
+                            a{
+                                width: 132px;
+                                margin: 0 auto; 
+                                margin-top: 32px;
+                                font-size: 12px;
+                                line-height: 20px;
+                            }
+                            p{
+                                font-size: 12px;
+                                line-height: 24px;
+                            }
+                        }
+                    }
+            }
+        }
+    }
+}
+
+
+
+/* 人气推荐 */
 
