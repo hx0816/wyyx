@@ -486,7 +486,8 @@ input {
           box-sizing: border-box;
           border: 1px solid #cddcca;
           padding: 12px;
-          display: none; }
+          display: none;
+          background-color: #fff; }
           #footer #state .state_center > div > div .qq_sm::after, #footer #state .state_center > div > div .vx_sm::after {
             content: ' ';
             position: absolute;

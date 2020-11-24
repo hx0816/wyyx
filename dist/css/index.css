@@ -268,3 +268,100 @@
           line-height: 24px; }
 
 /* 人气推荐 */
+/* 限时购 */
+#limit {
+  height: 595px;
+  box-sizing: border-box;
+  padding-top: 52px; }
+  #limit .limit_title {
+    height: 54px; }
+    #limit .limit_title a:hover {
+      color: #b4a078; }
+    #limit .limit_title > a {
+      font-size: 14px;
+      color: #333333;
+      float: right;
+      line-height: 54px; }
+    #limit .limit_title h2 a {
+      float: left;
+      font-size: 26px;
+      color: #333333;
+      font-weight: bold;
+      line-height: 42px; }
+  #limit .limit_list {
+    height: 430px;
+    box-sizing: border-box; }
+    #limit .limit_list dt, #limit .limit_list dd {
+      box-sizing: border-box; }
+    #limit .limit_list dt {
+      width: 224px;
+      height: 100%;
+      float: left; }
+      #limit .limit_list dt a {
+        display: block;
+        height: 100%; }
+    #limit .limit_list dd {
+      width: 432px;
+      height: 214px;
+      float: left;
+      border: 1px solid #f0ece4; }
+      #limit .limit_list dd:hover > a img {
+        transform: scale(1.1); }
+      #limit .limit_list dd > a {
+        float: left;
+        height: 100%; }
+        #limit .limit_list dd > a img {
+          transition: 1s; }
+      #limit .limit_list dd > div {
+        float: left;
+        box-sizing: border-box;
+        padding-top: 20px; }
+        #limit .limit_list dd > div a {
+          font-size: 16px;
+          color: #000000;
+          line-height: 16px; }
+          #limit .limit_list dd > div a:hover {
+            color: #b4a078; }
+        #limit .limit_list dd > div .p1 {
+          font-size: 14px;
+          color: #999999;
+          line-height: 34px; }
+        #limit .limit_list dd > div div {
+          height: 32px;
+          line-height: 32px; }
+          #limit .limit_list dd > div div div {
+            margin-top: 11px;
+            width: 150px;
+            height: 8px;
+            border: 1px solid #f2cecd;
+            border-radius: 5px;
+            float: left; }
+          #limit .limit_list dd > div div span {
+            font-size: 14px;
+            color: #999999;
+            float: right;
+            margin-left: 10px; }
+        #limit .limit_list dd > div .p2 {
+          height: 22px;
+          line-height: 22px;
+          font-size: 12px;
+          color: #be4141; }
+          #limit .limit_list dd > div .p2 span {
+            color: #be4141;
+            font-weight: bold;
+            font-size: 18px; }
+          #limit .limit_list dd > div .p2 i {
+            margin-left: 20px;
+            font-size: 14px;
+            color: #999999;
+            text-decoration: line-through; }
+        #limit .limit_list dd > div button {
+          margin-top: 20px;
+          width: 116px;
+          height: 30px;
+          background-color: #fff3f3;
+          color: #d25a5a;
+          border: 1px solid #d25a5a;
+          cursor: pointer; }
+
+/* 限时购 */
