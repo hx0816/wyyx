@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>网易严选</title>
-    <link rel="stylesheet" href="../reset.css">
+    <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/common.css">
-    <link rel="stylesheet" href="../iconfont/iconfont.css">
+    <link rel="stylesheet" href="./iconfont/iconfont.css">
     <link rel="stylesheet" href="./css/index.css">
 </head>
 
@@ -24,27 +24,58 @@
                 <span class="phone">手机号登录</span>|
                 <span class="email">邮箱登录</span>
             </div>
-            <p class="verify">使用验证码登录</p>
-            <div class="mobile mb16">
-                <span class="l"><i class="iconfont  iconfont icon-shouji"></i></span>|
-                <input type="search" placeholder='请输入手机号' class="r">
+            <p class="verify">使用密码验证登录</p>
+            <div class="phone_login">
+                <div class="mobile mb16">
+                    <span class="l"><i class="iconfont  iconfont icon-shouji"></i></span>|
+                    <input type="search" placeholder='请输入手机号' class="r">
+                </div>
+                <div class="puzzle mb16">
+                    <div class="puzzle_track"></div>
+                    <div class="slide l">
+                        <span>→</span>
+                    </div>
+                    <div class="puzzle_text">
+                        向右拖动滑块填充拼图
+                    </div>
+                </div>
+                <div class="getverify mb16">
+                    <input type="search" placeholder="请输入短信验证码" class="l">
+                    <button class="r">获取验证码</button>
+                </div>   
+                <div class="login_hint">
+                    <i>!</i>
+                    <span>请输入手机号</span>
+                </div>
             </div>
-            <div class="puzzle mb16">
-                <div class="slide l">→</div>
-                向右拖动滑块填充拼图
+            <div class="email_login">
+                <div>
+                    <span class="l"><i class="iconfont  iconfont icon-shouji"></i></span>|
+                    <input type="search" placeholder='邮箱账号' class="r">
+                </div>
+                <div class="div2">
+                    <span class="l"><i class="iconfont  iconfont icon-shouji"></i></span>|
+                    <input type="search" placeholder='请输入密码' class="r">
+                </div>
             </div>
-            <div class="getverify mb16">
-                <input type="search" placeholder="请输入短信验证码" class="l">
-                <button class="r">获取验证码</button>
+            <div class="verify_login">
+                <div>
+                    <span class="l"><i class="iconfont  iconfont icon-shouji"></i></span>|
+                    <input type="search" placeholder='请输入手机号' class="r">
+                </div>
+                <div class="div2">
+                    <span class="l"><i class="iconfont  iconfont icon-shouji"></i></span>|
+                    <input type="search" placeholder='请输入密码' class="r">
+                </div>
             </div>
-            <div class="shortcut-login">
-                手机号快捷登录
-            </div>
-            <div class="consent">
-                <input type="checkbox">
-                我同意<a href="Javascript:;">《服务条款》</a>和
-                <a href="Javascript:;">《网易隐私政策》</a>
-            </div>
+        </div>
+        <div class="shortcut-login">
+            手机号快捷登录
+        </div>
+        <div class="consent">
+            <input type="checkbox">
+            我同意<a href="Javascript:;">《服务条款》</a>和
+            <a href="Javascript:;">《网易隐私政策》</a>
         </div>
         <div class="method">
             <div class="method_left l">
@@ -57,6 +88,8 @@
                 遇到问题？
             </a>
         </div>
+    </div>
+    
     </div>
     <!-- 点击登录后的弹窗 -->
 
@@ -328,32 +361,32 @@
                             </div>
                         </a>
                     </dd>
-                    
+
                 </dl>
             </div>
         </div>
         <div class="first_service">
-                <a href="javascript">
+            <a href="javascript">
                 <img src="./img/hot_sm.jpg">
                 <p class="p1">扫码领</p>
                 <p>APP大额</p>
                 <p>新人红包</p>
+            </a>
+            <div class="first_service_cen">
+                <a href="javascript">
+                    <img src="./img/hot_kf.jpg">
+                    <p>在线客服</p>
                 </a>
-                <div class="first_service_cen">
-                   <a href="javascript">
-                       <img src="./img/hot_kf.jpg">
-                       <p>在线客服</p>
-                   </a>
-                </div>
-                <div class="first_service_btm">
-                    <a href="javascript">
-                        <img src="./img/hot_db.jpg">
-                        <p>返回顶部</p>
-                    </a>
-                </div>
+            </div>
+            <div class="first_service_btm">
+                <a href="javascript">
+                    <img src="./img/hot_db.jpg">
+                    <p>返回顶部</p>
+                </a>
+            </div>
         </div>
-                
-        </div>
+
+    </div>
     </div>
     <!-- 新品首发 -->
 
@@ -382,7 +415,7 @@
                     </a>
                     <div>
                         <a href="javascript:;">飞天53度贵州茅台酒 5<br>
-                        00毫升
+                            00毫升
                         </a>
                         <p>￥1499</p>
                     </div>
@@ -393,7 +426,7 @@
                     </a>
                     <div>
                         <a href="javascript:;">飞天53度贵州茅台酒 5<br>
-                        00毫升
+                            00毫升
                         </a>
                         <p>￥1499</p>
                     </div>
@@ -404,7 +437,7 @@
                     </a>
                     <div>
                         <a href="javascript:;">飞天53度贵州茅台酒 5<br>
-                        00毫升
+                            00毫升
                         </a>
                         <p>￥1499</p>
                     </div>
@@ -415,7 +448,7 @@
                     </a>
                     <div>
                         <a href="javascript:;">飞天53度贵州茅台酒 5<br>
-                        00毫升
+                            00毫升
                         </a>
                         <p>￥1499</p>
                     </div>
@@ -426,7 +459,7 @@
                     </a>
                     <div>
                         <a href="javascript:;">飞天53度贵州茅台酒 5<br>
-                        00毫升
+                            00毫升
                         </a>
                         <p>￥1499</p>
                     </div>
@@ -604,5 +637,7 @@
     </div>
     <!-- 底部 -->
 </body>
+<script src="./js/utils.js"></script>
+<script src="./js/common.js"></script>
 
 </html>

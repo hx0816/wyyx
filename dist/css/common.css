@@ -15,6 +15,9 @@ input {
   border: none;
   outline: none; }
 
+button {
+  outline: none; }
+
 .bg1 {
   background-image: url("../img/1.webp"); }
 
@@ -46,7 +49,6 @@ input {
 /* 登录/注册 */
 #login {
   width: 384px;
-  height: 488px;
   background-color: #fff;
   position: fixed;
   left: 50%;
@@ -61,6 +63,78 @@ input {
     box-sizing: border-box;
     width: 100%;
     padding: 0 42px; }
+  #login .login_hint {
+    height: 18px;
+    line-height: 18px;
+    display: none; }
+    #login .login_hint i {
+      float: left;
+      background-color: #ab2b2b;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      color: white;
+      line-height: 16px;
+      text-align: center;
+      font-size: 12px; }
+    #login .login_hint span {
+      font-size: 12px;
+      color: #d4282d;
+      margin-left: 10px; }
+  #login .email_login {
+    display: none; }
+    #login .email_login > div {
+      height: 36px;
+      line-height: 36px;
+      color: #e8e8e8;
+      border: 1px solid #e8e8e8; }
+    #login .email_login .div2 {
+      margin-top: 15px; }
+    #login .email_login span {
+      width: 35px;
+      height: 24px;
+      margin-top: 7px;
+      line-height: 24px; }
+      #login .email_login span i {
+        font-size: 18px;
+        margin-left: 11px; }
+    #login .email_login input {
+      border: none;
+      outline: none;
+      height: 100%;
+      width: 256px;
+      text-indent: 8px;
+      color: #333; }
+      #login .email_login input::placeholder {
+        color: #e8e8e8;
+        font-size: 14px; }
+  #login .verify_login {
+    display: none; }
+    #login .verify_login > div {
+      height: 36px;
+      line-height: 36px;
+      color: #e8e8e8;
+      border: 1px solid #e8e8e8; }
+    #login .verify_login .div2 {
+      margin-top: 15px; }
+    #login .verify_login span {
+      width: 35px;
+      height: 24px;
+      margin-top: 7px;
+      line-height: 24px; }
+      #login .verify_login span i {
+        font-size: 18px;
+        margin-left: 11px; }
+    #login .verify_login input {
+      border: none;
+      outline: none;
+      height: 100%;
+      width: 256px;
+      text-indent: 8px;
+      color: #333; }
+      #login .verify_login input::placeholder {
+        color: #e8e8e8;
+        font-size: 14px; }
   #login .mb16 {
     margin-bottom: 16px;
     border: 1px solid #e8e8e8; }
@@ -80,9 +154,13 @@ input {
       color: #333333;
       line-height: 20px; }
     #login .login .phone {
-      margin: 0 56px 0 14px; }
+      margin: 0 56px 0 14px;
+      cursor: pointer; }
     #login .login .email {
-      margin-left: 53px; }
+      margin-left: 53px;
+      cursor: pointer; }
+      #login .login .email:hover {
+        color: #b4a078; }
   #login .verify {
     font-size: 12px;
     color: #666666;
@@ -119,16 +197,33 @@ input {
     line-height: 38px;
     color: #45494c;
     text-align: center;
-    font-size: 12px; }
+    font-size: 12px;
+    position: relative; }
     #login .puzzle .slide {
       height: 100%;
       width: 40px;
-      border-right: 1px solid #dcdedf;
+      border: 1px solid #dcdedf;
       text-align: center;
       cursor: pointer;
-      border-radius: 3px; }
+      border-radius: 3px;
+      position: absolute;
+      font-size: 20px; }
       #login .puzzle .slide:hover {
-        background-color: #1991fa; }
+        background-color: #1991fa;
+        color: white; }
+      #login .puzzle .slide span {
+        position: absolute;
+        left: 10px; }
+    #login .puzzle_track, #login .puzzle_text {
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0; }
+    #login .puzzle_track {
+      width: 0; }
+    #login .puzzle_text {
+      width: 100%;
+      z-index: -1; }
   #login .getverify {
     height: 36px;
     line-height: 36px; }
@@ -148,7 +243,9 @@ input {
       #login .getverify button:hover {
         color: #b4a078; }
   #login .shortcut-login {
-    margin-top: 40px;
+    width: 300px;
+    margin: 0 auto;
+    margin-top: 25px;
     height: 48px;
     background-color: #b4a078;
     border-radius: 3px;
@@ -158,6 +255,8 @@ input {
     margin-bottom: 12px;
     cursor: pointer; }
   #login .consent {
+    width: 300px;
+    margin: 0 auto;
     font-size: 12px;
     color: #999999;
     height: 18px;

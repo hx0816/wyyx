@@ -23,6 +23,20 @@ task('script', async ()=>{
   .pipe(load.connect.reload())
 })
 
+// 处理iconfont
+task('iconfont',async()=>{
+  src('./iconfont/*.*')
+  .pipe(dest('./dist/iconfont'))
+  .pipe(load.connect.reload())
+})
+
+//处理jquery
+task('jquery',async()=>{
+  src('jquery/*.*')
+  .pipe(dest('dist/jquery'))
+  .pipe(load.connect.reload())
+})
+
 // 处理HTML
 task('html', async ()=>{
   src('./pages/*.html')
@@ -44,6 +58,8 @@ task('watch', async ()=>{
   watch('./sass/*.scss',series('sass'))
   watch('./img/*.*',series('img'))
   watch('./js/*.js',series('script'))
+  watch('./iconfont/*.*',series('iconfont'))
+  watch('./jquery/*.*',series('jquery'))
 })
 
 // 自动刷新服务
@@ -55,4 +71,4 @@ task('connect', async ()=>{
   })
 })
 
-task('dev', series('delDist','img','html','script','sass','connect','watch'))
+task('dev', series('delDist','img','html','script','sass','connect','iconfont','jquery','watch'))

@@ -25,7 +25,7 @@ function getYZM(num) {
     for (var i = 0; i < num; i++) {
         rand = getRand(48, 122)
         if (rand >= 58 && rand <= 64 || rand >= 91 && rand <= 96) {
-            i--;
+            i++;
         } else {
             yzm += String.fromCharCode(rand)
         }
