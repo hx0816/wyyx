@@ -16,10 +16,15 @@ var hint = $1('.login_hint');//提示
 var slide = $1('#login .slide')//滑块
 var short = $1('.shortcut-login')//快速登录
 var consent = $1('.consent input')//条款
+var goBack = $1('.service_btm');
 
 
 //点击登录/注册弹出界面
 tLogin.onclick = function () {
+    loginAdd()
+}
+
+function loginAdd() {
     mask.style.display = 'block';
     login.style.display = 'block';
     consent.checked = true;
@@ -182,10 +187,10 @@ tLogin.onclick = function () {
     }
 }
 //在线客服
-var onLine = $1('.service_cn')
-
-
-
+var onLine = $1('.service_cen')
+onLine.onclick = function(){
+    loginAdd()
+}
 
 //导航栏
 var lis = $2('#nav li')
@@ -234,10 +239,14 @@ window.onscroll = function () {
         hot.style.top = '23px'
         hot.style.left = '-136px'
     }
+    if(document.documentElement.scrollTop >= 1000){
+        goBack.style.display = 'block'
+    }else if(document.documentElement.scrollTop < 1000){
+        goBack.style.display = 'none'
+    }
 }
 
 //返回顶部
-var goBack = $1('.service_btm');
 goBack.onclick = function () {
     document.documentElement.scrollTop = 0
 }

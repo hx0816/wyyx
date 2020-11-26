@@ -4,13 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>购物车</title>
-    <link rel="stylesheet" href="../reset.css">
-    <link rel="stylesheet" href="../iconfont/iconfont.css">
+    <title>商品详情页</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./iconfont/iconfont.css">
     <link rel="stylesheet" href="./css/common.css">
 </head>
 
 <body>
+
     <!-- 点击登录后的遮罩 -->
     <div id="mask"></div>
     <!-- 点击登录后的遮罩 -->
@@ -23,27 +24,58 @@
                 <span class="phone">手机号登录</span>|
                 <span class="email">邮箱登录</span>
             </div>
-            <p class="verify">使用验证码登录</p>
-            <div class="mobile mb16">
-                <span class="l"><i class="iconfont  iconfont icon-shouji"></i></span>|
-                <input type="search" placeholder='请输入手机号' class="r">
+            <p class="verify">使用密码验证登录</p>
+            <div class="phone_login">
+                <div class="mobile mb16">
+                    <span class="l"><i class="iconfont  iconfont icon-shouji"></i></span>|
+                    <input type="search" placeholder='请输入手机号' class="r">
+                </div>
+                <div class="puzzle mb16">
+                    <div class="puzzle_track"></div>
+                    <div class="slide l">
+                        <span>→</span>
+                    </div>
+                    <div class="puzzle_text">
+                        向右拖动滑块填充拼图
+                    </div>
+                </div>
+                <div class="getverify mb16">
+                    <input type="search" placeholder="请输入短信验证码" class="l">
+                    <button class="r">获取验证码</button>
+                </div>
+                <div class="login_hint">
+                    <i>!</i>
+                    <span>请输入手机号</span>
+                </div>
             </div>
-            <div class="puzzle mb16">
-                <div class="slide l">→</div>
-                向右拖动滑块填充拼图
+            <div class="email_login">
+                <div>
+                    <span class="l"><i class="iconfont  iconfont icon-shouji"></i></span>|
+                    <input type="search" placeholder='邮箱账号' class="r">
+                </div>
+                <div class="div2">
+                    <span class="l"><i class="iconfont  iconfont icon-shouji"></i></span>|
+                    <input type="search" placeholder='请输入密码' class="r">
+                </div>
             </div>
-            <div class="getverify mb16">
-                <input type="search" placeholder="请输入短信验证码" class="l">
-                <button class="r">获取验证码</button>
+            <div class="verify_login">
+                <div>
+                    <span class="l"><i class="iconfont  iconfont icon-shouji"></i></span>|
+                    <input type="search" placeholder='请输入手机号' class="r">
+                </div>
+                <div class="div2">
+                    <span class="l"><i class="iconfont  iconfont icon-shouji"></i></span>|
+                    <input type="search" placeholder='请输入密码' class="r">
+                </div>
             </div>
-            <div class="shortcut-login">
-                手机号快捷登录
-            </div>
-            <div class="consent">
-                <input type="checkbox">
-                我同意<a href="Javascript:;">《服务条款》</a>和
-                <a href="Javascript:;">《网易隐私政策》</a>
-            </div>
+        </div>
+        <div class="shortcut-login">
+            手机号快捷登录
+        </div>
+        <div class="consent">
+            <input type="checkbox">
+            我同意<a href="Javascript:;">《服务条款》</a>和
+            <a href="Javascript:;">《网易隐私政策》</a>
         </div>
         <div class="method">
             <div class="method_left l">
@@ -58,6 +90,29 @@
         </div>
     </div>
     <!-- 点击登录后的弹窗 -->
+
+    <!-- 客服，返回顶部 -->
+    <div id="service">
+        <a href="javascript">
+            <img src="./img/hot_sm.jpg">
+            <p class="p1">扫码领</p>
+            <p>APP大额</p>
+            <p>新人红包</p>
+        </a>
+        <div class="service_cen">
+            <a href="javascript:;">
+                <img src="./img/hot_kf.jpg">
+                <p>在线客服</p>
+            </a>
+        </div>
+        <div class="service_btm">
+            <a href="javascript:;">
+                <img src="./img/hot_db.jpg">
+                <p>返回顶部</p>
+            </a>
+        </div>
+    </div>
+    <!-- 客服，返回顶部 -->
 
     <!-- 顶部 -->
     <div id="title" class="container-fluid">
@@ -126,9 +181,8 @@
         </div>
     </div>
     <!-- 头部 -->
-
-    <!-- 尾部 -->
-    <div id="footer" class="container-fluid">
+     <!-- 底部 -->
+     <div id="footer" class="container-fluid">
         <div id="state" class="container">
             <div class="state_serve">
                 <h2>客户服务</h2>
@@ -151,7 +205,7 @@
                         <span class="l">关注我们：</span>
                         <a href="javascript:;" class="qq">
                             <div class="qq_sm">
-                               <img src="./img/yx.jpg"> 
+                                <img src="./img/yx.jpg">
                             </div>
                         </a>
                         <a href="javascript:;" class="vx">
@@ -222,9 +276,9 @@
             </div>
         </div>
     </div>
-
-
-    <!-- 尾部 -->
+    <!-- 底部 -->
 </body>
+<script src="./js/utils.js"></script>
+<script src="./js/common.js"></script>
 
 </html>
