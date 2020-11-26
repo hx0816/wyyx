@@ -17,50 +17,6 @@
   box-sizing: border-box;
   padding-top: 22px;
   position: relative; }
-  #first .first_service {
-    width: 72px;
-    height: 282px;
-    position: absolute;
-    top: 23px;
-    right: 0;
-    background-color: #fff; }
-    #first .first_service > a {
-      display: block;
-      font-size: 12px;
-      color: #bc3b3b;
-      text-align: center;
-      padding-bottom: 15px; }
-      #first .first_service > a .p1 {
-        color: #666666; }
-      #first .first_service > a p {
-        text-align: center;
-        line-height: 16px; }
-    #first .first_service_cen, #first .first_service_btm {
-      box-sizing: border-box;
-      padding: 0 8px; }
-      #first .first_service_cen:hover p, #first .first_service_btm:hover p {
-        color: #d99160; }
-      #first .first_service_cen a, #first .first_service_btm a {
-        border-top: 1px solid #eaeaea;
-        display: block;
-        width: 100%; }
-        #first .first_service_cen a p, #first .first_service_btm a p {
-          font-size: 14px; }
-        #first .first_service_cen a img, #first .first_service_btm a img {
-          display: block; }
-    #first .first_service_cen a p {
-      line-height: 36px; }
-    #first .first_service_cen a img {
-      margin-left: 13px;
-      margin-top: 14px; }
-    #first .first_service_btm {
-      height: 60px; }
-      #first .first_service_btm a p {
-        margin-top: 5px;
-        line-height: 26px; }
-      #first .first_service_btm a img {
-        margin-left: 18px;
-        margin-top: 14px; }
   #first_inner {
     position: relative; }
     #first_inner .first_hot {
@@ -202,7 +158,8 @@
       font-size: 26px;
       cursor: pointer; }
     #first_inner .first_prev {
-      left: -60px; }
+      left: -60px;
+      background: #e7e2d7; }
     #first_inner .first_next {
       right: -60px; }
 

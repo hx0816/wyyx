@@ -351,6 +351,80 @@ button{
 }
 /* 登录/注册 */
 
+/* 客服，返回顶部 */
+#service{
+    width: 72px;
+    height: 282px;
+    position: absolute;
+    z-index: 1;
+    top: 620px;
+    right: 0;
+    background-color: #fff;
+    &>a{
+        display: block;
+        font-size: 12px;
+        color: #bc3b3b;
+        text-align: center;
+        padding-bottom: 15px;
+        .p1{
+            color:#666666 ;
+        }
+        p{
+            text-align: center;
+            line-height: 16px;
+        }
+    }
+    .service{
+        &_cen,&_btm{
+            box-sizing: border-box;
+            padding: 0 8px;
+            &:hover{
+                p{
+                    color: #d99160;
+                }
+            }
+            a{
+                border-top: 1px solid #eaeaea;
+                display: block;
+                width: 100%;
+                p{
+                    font-size: 14px;
+                }
+                img{
+                    display: block;
+                }
+            }
+        }
+        &_cen{
+            a{
+                p{
+                    line-height: 36px;
+                }
+                img{
+                    margin-left: 13px;
+                    margin-top: 14px;
+                }
+            }
+        }
+        &_btm{
+            height: 60px;
+            a{
+                p{
+                    margin-top: 5px;
+                    line-height: 26px;
+                }
+                img{
+                    margin-left: 18px;
+                    margin-top: 14px;
+                }
+            }
+        }
+    }
+}
+
+
+/* 客服，返回顶部 */
+
 /* 顶部 */
 #title{
     background-color: #333333;
@@ -625,6 +699,115 @@ button{
     }
 }
 /* 头部 */
+
+/* 导航 */
+#nav{
+    height: 44px;
+    ul{
+        height: 100%;
+        line-height: 14px;
+        box-sizing: border-box;
+        padding-top: 22px;
+        li.active{
+            border-bottom: 3px solid #cc9756;
+            a{
+                color: #cc9756;
+            }
+        }
+        li{
+            float: left;
+            margin-right: 52px;
+            height: 23px;
+            box-sizing: border-box;
+            &:last-of-type{
+                margin-right: 0;
+            }
+            a{
+                font-size: 14px;
+                color: #000000;
+                font-weight: bold;
+            }
+        }
+    }
+}
+/* 导航 */
+
+/* 下拉导航 */
+#nav2{
+    display: none;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    height: 51px;
+    box-sizing: border-box;
+    border-top: 1px solid #dadce0;
+    border-bottom: 1px solid #dadce0;
+    z-index: 10;
+    .nav2_logo{
+        margin-top: 12px;
+        h1{text-indent: -9999px;
+            a{
+                display: block;
+                background-image: url(../img/2.webp);
+                width: 126px;
+                height: 30px;
+                background-position:0 -438px ;
+            }
+        }
+    }
+    .nav2_nav{
+        margin-left: 24px;
+        height: 100%;
+        line-height: 14px;
+        box-sizing: border-box;
+        padding-top: 20px;
+        li.active{
+            border-bottom: 3px solid #cc9756;
+            a{
+                color: #cc9756;
+            }
+        }
+        li{
+            float: left;
+            height: 30px;
+            box-sizing: border-box;
+            margin-right: 34px;
+            &:last-of-type{
+                margin-right: 0;
+            }
+            a{
+                height: 100%;
+                display: block;
+                font-size: 14px;
+                color: #000000;
+                font-weight: bold;
+            }
+        }
+    }
+    .nav2_right{
+        margin-top: 14px;
+        margin-right: 35px;
+        a{
+            float: left;
+            width: 22px;
+            height: 22px;
+            margin-left: 30px;
+            background-image: url(../img/2.webp);
+            &:nth-of-type(1){
+                background-position: 0 -541px;
+            }
+            &:nth-of-type(2){
+                background-position: 0 -785px;
+            }
+            &:nth-of-type(3){
+                background-position: 0 -80px;
+            }
+        }
+    }
+}
+
+
+/* 下拉导航 */
 
 /* 底部 */
 #footer{

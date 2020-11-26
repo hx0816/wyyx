@@ -409,6 +409,81 @@ button {
 }
 
 /* 登录/注册 */
+/* 客服，返回顶部 */
+#service {
+  width: 72px;
+  height: 282px;
+  position: absolute;
+  z-index: 1;
+  top: 620px;
+  right: 0;
+  background-color: #fff;
+}
+
+#service > a {
+  display: block;
+  font-size: 12px;
+  color: #bc3b3b;
+  text-align: center;
+  padding-bottom: 15px;
+}
+
+#service > a .p1 {
+  color: #666666;
+}
+
+#service > a p {
+  text-align: center;
+  line-height: 16px;
+}
+
+#service .service_cen, #service .service_btm {
+  box-sizing: border-box;
+  padding: 0 8px;
+}
+
+#service .service_cen:hover p, #service .service_btm:hover p {
+  color: #d99160;
+}
+
+#service .service_cen a, #service .service_btm a {
+  border-top: 1px solid #eaeaea;
+  display: block;
+  width: 100%;
+}
+
+#service .service_cen a p, #service .service_btm a p {
+  font-size: 14px;
+}
+
+#service .service_cen a img, #service .service_btm a img {
+  display: block;
+}
+
+#service .service_cen a p {
+  line-height: 36px;
+}
+
+#service .service_cen a img {
+  margin-left: 13px;
+  margin-top: 14px;
+}
+
+#service .service_btm {
+  height: 60px;
+}
+
+#service .service_btm a p {
+  margin-top: 5px;
+  line-height: 26px;
+}
+
+#service .service_btm a img {
+  margin-left: 18px;
+  margin-top: 14px;
+}
+
+/* 客服，返回顶部 */
 /* 顶部 */
 #title {
   background-color: #333333;
@@ -716,6 +791,134 @@ button {
 }
 
 /* 头部 */
+/* 导航 */
+#nav {
+  height: 44px;
+}
+
+#nav ul {
+  height: 100%;
+  line-height: 14px;
+  box-sizing: border-box;
+  padding-top: 22px;
+}
+
+#nav ul li.active {
+  border-bottom: 3px solid #cc9756;
+}
+
+#nav ul li.active a {
+  color: #cc9756;
+}
+
+#nav ul li {
+  float: left;
+  margin-right: 52px;
+  height: 23px;
+  box-sizing: border-box;
+}
+
+#nav ul li:last-of-type {
+  margin-right: 0;
+}
+
+#nav ul li a {
+  font-size: 14px;
+  color: #000000;
+  font-weight: bold;
+}
+
+/* 导航 */
+/* 下拉导航 */
+#nav2 {
+  display: none;
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  height: 51px;
+  box-sizing: border-box;
+  border-top: 1px solid #dadce0;
+  border-bottom: 1px solid #dadce0;
+  z-index: 10;
+}
+
+#nav2 .nav2_logo {
+  margin-top: 12px;
+}
+
+#nav2 .nav2_logo h1 {
+  text-indent: -9999px;
+}
+
+#nav2 .nav2_logo h1 a {
+  display: block;
+  background-image: url(../img/2.webp);
+  width: 126px;
+  height: 30px;
+  background-position: 0 -438px;
+}
+
+#nav2 .nav2_nav {
+  margin-left: 24px;
+  height: 100%;
+  line-height: 14px;
+  box-sizing: border-box;
+  padding-top: 20px;
+}
+
+#nav2 .nav2_nav li.active {
+  border-bottom: 3px solid #cc9756;
+}
+
+#nav2 .nav2_nav li.active a {
+  color: #cc9756;
+}
+
+#nav2 .nav2_nav li {
+  float: left;
+  height: 30px;
+  box-sizing: border-box;
+  margin-right: 34px;
+}
+
+#nav2 .nav2_nav li:last-of-type {
+  margin-right: 0;
+}
+
+#nav2 .nav2_nav li a {
+  height: 100%;
+  display: block;
+  font-size: 14px;
+  color: #000000;
+  font-weight: bold;
+}
+
+#nav2 .nav2_right {
+  margin-top: 14px;
+  margin-right: 35px;
+}
+
+#nav2 .nav2_right a {
+  float: left;
+  width: 22px;
+  height: 22px;
+  margin-left: 30px;
+  background-image: url(../img/2.webp);
+}
+
+#nav2 .nav2_right a:nth-of-type(1) {
+  background-position: 0 -541px;
+}
+
+#nav2 .nav2_right a:nth-of-type(2) {
+  background-position: 0 -785px;
+}
+
+#nav2 .nav2_right a:nth-of-type(3) {
+  background-position: 0 -80px;
+}
+
+/* 下拉导航 */
 /* 底部 */
 #footer {
   height: 566px;

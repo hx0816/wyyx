@@ -19,72 +19,6 @@
     box-sizing: border-box;
     padding-top: 22px;
     position: relative;
-    .first_service{
-        width: 72px;
-        height: 282px;
-        position: absolute;
-        top: 23px;
-        right: 0;
-        background-color: #fff;
-        &>a{
-            display: block;
-            font-size: 12px;
-            color: #bc3b3b;
-            text-align: center;
-            padding-bottom: 15px;
-            .p1{
-                color:#666666 ;
-            }
-            p{
-                text-align: center;
-                line-height: 16px;
-            }
-        }
-        &_cen,&_btm{
-            box-sizing: border-box;
-            padding: 0 8px;
-            &:hover{
-                p{
-                    color: #d99160;
-                }
-            }
-            a{
-                border-top: 1px solid #eaeaea;
-                display: block;
-                width: 100%;
-                p{
-                    font-size: 14px;
-                }
-                img{
-                    display: block;
-                }
-            }
-        }
-        &_cen{
-            a{
-                p{
-                    line-height: 36px;
-                }
-                img{
-                    margin-left: 13px;
-                    margin-top: 14px;
-                }
-            }
-        }
-        &_btm{
-            height: 60px;
-            a{
-                p{
-                    margin-top: 5px;
-                    line-height: 26px;
-                }
-                img{
-                    margin-left: 18px;
-                    margin-top: 14px;
-                }
-            }
-        }
-    }
     &_inner{
         .first_hot{
             width: 110px;
@@ -277,6 +211,7 @@
             }
             &_prev{
                 left: -60px;
+                background: #e7e2d7;
             }
             &_next{
                 right: -60px;
