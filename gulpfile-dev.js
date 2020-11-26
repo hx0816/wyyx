@@ -8,18 +8,25 @@ task('delDist', async ()=>{
   await del('./dist')
 })
 
+
+// 处理JS
+// task('script', async ()=>{
+//   src('./js/*.js')
+//   .pipe(load.babel({ presets: ['@babel/env']}))
+//   .pipe(dest('./dist/js'))
+//   .pipe(load.connect.reload())
+// })
+
+task('script', async ()=>{
+  src('./js/*.*')
+  .pipe(dest('./dist/js'))
+  .pipe(load.connect.reload())
+})
+
 // 处理图片
 task('img', async ()=>{
   src('./img/*.*')
   .pipe(dest('./dist/img'))
-  .pipe(load.connect.reload())
-})
-
-// 处理JS
-task('script', async ()=>{
-  src('./js/*.js')
-  .pipe(load.babel({ presets: ['@babel/env']}))
-  .pipe(dest('./dist/js'))
   .pipe(load.connect.reload())
 })
 
