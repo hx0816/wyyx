@@ -150,6 +150,7 @@
         }
         position: relative;
         .first_inner{
+            position: relative;
             &_text{
                 height: 56px;line-height: 56px;
                 color: #333333;
@@ -179,6 +180,38 @@
                 }
             }
             &_list{
+                overflow: hidden;
+                height: 438px;
+                position: relative;
+                overflow: hidden;
+                &>div{
+                    height: 458px;
+                    width: 5000px;
+                }
+                .b{
+                    display: block;
+                }
+                .n{
+                    display: none;
+                }
+                ul{
+                    position: absolute;
+                    width: 1090px;
+                    height: 438px;
+                    top: 0;
+                    &:nth-of-type(1){
+                        left: 0;
+                    }
+                    &:nth-of-type(2){
+                        left: 1200px;
+                    }
+                    &:nth-of-type(3){
+                        left: 2400px;
+                    }
+                    &:nth-of-type(4){
+                        left: 3600px;
+                    }
+                }
                 li{
                     float: left;
                     margin-right: 10px;

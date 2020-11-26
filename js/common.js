@@ -190,3 +190,54 @@ short.onclick = function () {
         hint.children[1].innerText = '手机号格式错误'
     }
 }
+
+//滚动条滚动
+var ser = $1('.first_service');
+var hot = $1('.first_hot')
+window.onscroll = function(){
+    if(document.documentElement.scrollTop >= 567){
+        hot.style.position = 'fixed';
+        hot.style.top = '50px';
+        hot.style.left = '270px';
+        ser.style.position = 'fixed';
+        ser.style.top = '50px';
+    }else if(document.documentElement.scrollTop < 567){
+        ser.style.position = 'absolute'
+        ser.style.top = '23px'
+        ser.style.right = '0'
+        hot.style.position = 'absolute'
+        hot.style.top = '23px'
+        hot.style.left = '-136px'
+    }
+    
+}
+
+//滑入滑出
+var prev = $1('.first_prev');
+var next = $1('.first_next');
+var list = $1('.first_inner_list')
+var showIndex = 0;
+prev.onclick = function(){
+    if(showIndex == 0){
+        showIndex = 0
+    }else{
+        showIndex -- 
+    }
+    console.log(showIndex);
+    animate(list,{
+        scrollLeft:1200 * showIndex,
+        speed:500,
+    })
+}
+next.onclick = function(){
+    if(showIndex == 3){
+        showIndex = 3
+    }else{
+        showIndex++
+    }
+    animate(list,{
+        scrollLeft:1200 * showIndex,
+        speed:500,
+    })
+    
+}
