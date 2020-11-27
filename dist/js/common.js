@@ -18,22 +18,34 @@ var vInner = $1('.verify_login');//密码验证登录内容
 var pIpt = $1('.phone_login input');//输入手机号
 var getYzm = $1('.getverify button');//获取验证码按钮
 var yzmVal = $1('.getverify input');//获取验证码值
+var eAccount = $1('.eAccount')//邮箱账号
+var ePassword = $1('.ePassword')//邮箱账号
 var hint = $1('.login_hint');//提示
 var slide = $1('#login .slide')//滑块
 var short = $1('.shortcut-login')//快速登录
+var onLine = $1('.service_cen')//在线客服
+
+// header头部
+var hSearch = $1('.header_center_search input')
+
+
+
+
 var consent = $1('.consent input')//条款
 var goBack = $1('.service_btm');//返回顶部
 
 
 
 
-
+//登录注册
 
 //点击登录/注册弹出界面
 tLogin.onclick = function () {
     loginAdd()
+    phoneLogin()
 }
 
+//所有登录方式共用操作
 function loginAdd() {
     mask.style.display = 'block';
     login.style.display = 'block';
@@ -44,36 +56,43 @@ function loginAdd() {
         mask.style.display = 'none';
         login.style.display = 'none';
     }
-    //手机登录
-    pLogin.onclick = function () {
-        pInner.style.display = 'block';
-        vLogin.style.display = 'block';
+}
+//手机登录
+pLogin.onclick = function () {
+    pInner.style.display = 'block';
+    vLogin.style.display = 'block';
+    eInner.style.display = 'none';
+    vInner.style.display = 'none';
+    short.innerText = '手机号快捷登录'
+}
+//邮箱登录
+eLogin.onclick = function () {
+    pInner.style.display = 'none';
+    vLogin.style.display = 'none';
+    eInner.style.marginTop = '50px';
+    eInner.style.display = 'block';
+    vInner.style.display = 'none';
+    short.innerText = '登录'
+}
+var i = 0
+//验证码登录
+vLogin.onclick = function () {
+    if (i % 2 == 0) {
+        vInner.style.display = 'block';
         eInner.style.display = 'none';
-        vInner.style.display = 'none';
-    }
-    //邮箱登录
-    eLogin.onclick = function () {
         pInner.style.display = 'none';
-        vLogin.style.display = 'none';
-        eInner.style.marginTop = '50px';
-        eInner.style.display = 'block';
+        vLogin.innerText = '短信快捷登录';
+    } else {
+        pInner.style.display = 'block';
         vInner.style.display = 'none';
+        vLogin.innerText = '使用密码验证登录';
     }
-    var i = 0
-    //验证码登录
-    vLogin.onclick = function () {
-        if (i % 2 == 0) {
-            vInner.style.display = 'block';
-            eInner.style.display = 'none';
-            pInner.style.display = 'none';
-            vLogin.innerText = '短信快捷登录';
-        } else {
-            pInner.style.display = 'block';
-            vInner.style.display = 'none';
-            vLogin.innerText = '使用密码验证登录';
-        }
-        i++
-    }
+    i++
+    short.innerText = '登录'
+}
+
+//手机号登录函数
+function phoneLogin() {
     //获取验证码
     getYzm.onclick = function () {
         yzmVal.style.border = '1px solid white'
@@ -197,6 +216,10 @@ function loginAdd() {
                 hint.style.display = 'block';
                 hint.children[1].innerText = '请输入短信验证码'
                 yzmVal.style.border = '1px solid red'
+                yzmVal.onfocus = function () {
+                    yzmVal.style.border = '1px solid white'
+                    hint.style.display = 'none'
+                }
             } else if (yzmVal.value === '1234') {
                 //判断是否勾选条件条款
                 conChecked()
@@ -210,8 +233,62 @@ function loginAdd() {
         }
     }
 }
+
+//邮箱登录函数
+
+//登录后和退出
+function conChecked() {
+    if (consent.checked) {//登录成功
+        mask.style.display = 'none'
+        login.style.display = 'none'
+        tLogin.children[0].innerText = '消息'
+        setCookie({
+            key: 'username',
+            val: pIpt.value,
+        })
+        zh.children[0].innerText = getCookie('username')
+        tLogin.onclick = null;
+        onLine.onclick = null;
+        zh.onmouseenter = function () {//显示账号下拉菜单
+            zhList.style.display = 'block'
+            //退出登录
+            logout.onclick = function () {
+                mask.style.display = 'block'
+                out.style.display = 'block'
+                cel.onclick = function () {//取消退出
+                    mask.style.display = 'none'
+                    out.style.display = 'none'
+                }
+                con.onclick = function () {//确定退出
+                    mask.style.display = 'none'
+                    out.style.display = 'none'
+                    zh.style.display = 'none'
+                    tLogin.children[0].innerText = '登录/注册'
+                    location.reload()
+                    tLogin.onclick = function () {
+                        loginAdd()
+                    }
+                    onLine.onclick = function () {
+                        loginAdd()
+                    }
+
+                }
+            }
+        }
+        zh.onmouseleave = function () {
+            zhList.style.display = 'none'
+        }
+    } else {
+        hint.style.display = 'block';
+        hint.children[1].innerText = '你必须同意相关的条款'
+    }
+}
+
+//登录注册
+
+
+
 //在线客服
-var onLine = $1('.service_cen')
 onLine.onclick = function () {
     loginAdd()
 }
@@ -275,53 +352,33 @@ goBack.onclick = function () {
     document.documentElement.scrollTop = 0
 }
 
-//登录后和退出
-function conChecked() {
-    if (consent.checked) {//登录成功
-        mask.style.display = 'none'
-        login.style.display = 'none'
-        tLogin.children[0].innerText = '消息'
-        setCookie({
-            key: 'username',
-            val: pIpt.value,
-        })
-        zh.children[0].innerText = getCookie('username')
-        tLogin.onclick = null;
-        onLine.onclick = null;
-        zh.onmouseenter = function () {//显示账号下拉菜单
-            zhList.style.display = 'block'
-            //退出登录
-            logout.onclick = function () {
-                mask.style.display = 'block'
-                out.style.display = 'block'
-                cel.onclick = function () {//取消退出
-                    mask.style.display = 'none'
-                    out.style.display = 'none'
-                }
-                con.onclick = function () {//确定退出
-                    mask.style.display = 'none'
-                    out.style.display = 'none'
-                    zh.style.display = 'none'
-                    tLogin.children[0].innerText = '登录/注册'
-                    location.reload()
-                    tLogin.onclick = function () {
-                        loginAdd()
-                    }
-                    onLine.onclick = function () {
-                        loginAdd()
-                    }
 
-                }
-            }
+
+//header头部
+
+
+
+hSearch.onkeydown = function () {
+    ajax({
+        url: 'https://you.163.com/xhr/search/searchAutoComplete.json',
+        type: 'get',
+        dataType: 'json',
+        data: {
+            'csrf_token': 'b0eb5b7ac0113691e90256ffa91c638d',
+           ' keywordPrefix': hSearch.value,
+        },
+        success: function (json) {
+            console.log(1);
         }
-        zh.onmouseleave = function () {
-            zhList.style.display = 'none'
-        }
-    } else {
-        hint.style.display = 'block';
-        hint.children[1].innerText = '你必须同意相关的条款'
-    }
+    })
 }
+
+
+
+
+
+
+//header头部
 
 
 

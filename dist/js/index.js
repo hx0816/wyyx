@@ -4,9 +4,9 @@ var next = $1('.first_next');
 var list = $1('.first_inner_list')
 var showIndex = 0;
 prev.onclick = function(){
-    showIndex -- 
+    showIndex--
     next.style.background = '#e2c199'
-    if(showIndex == 0){
+    if(showIndex <= 0){
         showIndex = 0
         prev.style.background = '#e7e2d7'
     }
@@ -18,7 +18,7 @@ prev.onclick = function(){
 next.onclick = function(){
     showIndex++
     prev.style.background = '#e2c199'
-    if(showIndex == 3){
+    if(showIndex >= 3){
         showIndex = 3
         next.style.background = '#e7e2d7'
     }
@@ -26,5 +26,4 @@ next.onclick = function(){
         scrollLeft:1200 * showIndex,
         speed:500,
     })
-    
 }
