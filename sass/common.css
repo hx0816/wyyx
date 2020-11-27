@@ -320,6 +320,7 @@ button {
 }
 
 #login .getverify input {
+  border: 1px solid white;
   width: 208px;
   height: 100%;
   text-indent: 8px;

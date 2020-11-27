@@ -65,6 +65,7 @@ function loginAdd() {
     }
     //获取验证码
     getYzm.onclick = function () {
+        yzmVal.style.border = '1px solid white'
         var val = pIpt.value;
         var reg = /1[3-8]\d{9}/g;
         if (val == '') {
@@ -124,13 +125,21 @@ function loginAdd() {
                                 hint.style.display = 'block';
                                 hint.children[1].innerText = '请输入手机号';
                             } else if (reg.test(val)) {
+                                ajax({
+                                    url: './json/test2.txt',
+                                    type: 'get',
+                                    dataType: 'json',
+                                    success: function (json) {
+                                        yzmVal.value = json
+                                    }
+                                })
                                 var i = 30
                                 getYzm.innerText = i + '秒后重发'
                                 var timer = setInterval(() => {
                                     i--;
                                     if (i <= 0) {
-                                        getYzm.innerText = '获取验证码'
                                         clearInterval(timer);
+                                        getYzm.innerText = '获取验证码'
                                     }
                                     getYzm.innerText = i + '秒后重发'
                                     getYzm.onclick = null
@@ -176,9 +185,19 @@ function loginAdd() {
             if (yzmVal.value == '') {
                 hint.style.display = 'block';
                 hint.children[1].innerText = '请输入短信验证码'
-            } else if (reg1.test(yzmVal.value)) {
+                yzmVal.style.border = '1px solid red'
+            } else if (yzmVal.value === '1234') {
+                //判断是否勾选条件条款
+                if (consent.checked) {
+                    mask.style.display = 'none'
+                    login.style.display = 'none'
+                } else {
+                    hint.style.display = 'block';
+                    hint.children[1].innerText = '你必须同意相关的条款'
+                }
+            } else {
                 hint.style.display = 'block';
-                hint.children[1].innerText = '登录成功'
+                hint.children[1].innerText = '验证码错误'
             }
         } else {
             hint.style.display = 'block';
@@ -188,7 +207,7 @@ function loginAdd() {
 }
 //在线客服
 var onLine = $1('.service_cen')
-onLine.onclick = function(){
+onLine.onclick = function () {
     loginAdd()
 }
 
@@ -239,9 +258,9 @@ window.onscroll = function () {
         hot.style.top = '23px'
         hot.style.left = '-136px'
     }
-    if(document.documentElement.scrollTop >= 1000){
+    if (document.documentElement.scrollTop >= 1000) {
         goBack.style.display = 'block'
-    }else if(document.documentElement.scrollTop < 1000){
+    } else if (document.documentElement.scrollTop < 1000) {
         goBack.style.display = 'none'
     }
 }

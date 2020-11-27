@@ -51,7 +51,7 @@
           left: 0;
           top: 0;
           display: none;
-          cursor: pointer; }
+          cursor: move; }
       #details_inner .details_con_l .con_menu {
         width: 100%;
         margin-top: 14px; }
@@ -229,3 +229,6 @@
           line-height: 47px;
           color: #999999;
           cursor: pointer; }
+
+#service {
+  top: 210px; }
