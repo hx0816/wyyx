@@ -3,6 +3,12 @@ var tLogin = $1('.title_login');
 var mask = $1('#mask');
 var login = $1('#login');
 var close = $1('#login .close');
+var zh = $1('.title_zh')//登录后的账号
+var zhList = $1('.title_zh ul')//登录账号的下拉选项
+var logout = $1('.logout a')//退出登录
+var out = $1('#logout')//退出登录界面
+var cel = $1('#logout .cancel')//取消退出
+var con = $1('#logout .confirm')//确定退出
 var pLogin = $1('#login .phone');//手机登录
 var eLogin = $1('#login .email');//邮箱登录
 var vLogin = $1('#login .verify');//验证码登录
@@ -16,7 +22,11 @@ var hint = $1('.login_hint');//提示
 var slide = $1('#login .slide')//滑块
 var short = $1('.shortcut-login')//快速登录
 var consent = $1('.consent input')//条款
-var goBack = $1('.service_btm');
+var goBack = $1('.service_btm');//返回顶部
+
+
+
+
 
 
 //点击登录/注册弹出界面
@@ -28,6 +38,7 @@ function loginAdd() {
     mask.style.display = 'block';
     login.style.display = 'block';
     consent.checked = true;
+    pIpt.value = getCookie('username')
     //点x关闭
     close.onclick = function () {
         mask.style.display = 'none';
@@ -188,13 +199,7 @@ function loginAdd() {
                 yzmVal.style.border = '1px solid red'
             } else if (yzmVal.value === '1234') {
                 //判断是否勾选条件条款
-                if (consent.checked) {
-                    mask.style.display = 'none'
-                    login.style.display = 'none'
-                } else {
-                    hint.style.display = 'block';
-                    hint.children[1].innerText = '你必须同意相关的条款'
-                }
+                conChecked()
             } else {
                 hint.style.display = 'block';
                 hint.children[1].innerText = '验证码错误'
@@ -269,5 +274,54 @@ window.onscroll = function () {
 goBack.onclick = function () {
     document.documentElement.scrollTop = 0
 }
+
+//登录后和退出
+function conChecked() {
+    if (consent.checked) {//登录成功
+        mask.style.display = 'none'
+        login.style.display = 'none'
+        tLogin.children[0].innerText = '消息'
+        setCookie({
+            key: 'username',
+            val: pIpt.value,
+        })
+        zh.children[0].innerText = getCookie('username')
+        tLogin.onclick = null;
+        onLine.onclick = null;
+        zh.onmouseenter = function () {//显示账号下拉菜单
+            zhList.style.display = 'block'
+            //退出登录
+            logout.onclick = function () {
+                mask.style.display = 'block'
+                out.style.display = 'block'
+                cel.onclick = function () {//取消退出
+                    mask.style.display = 'none'
+                    out.style.display = 'none'
+                }
+                con.onclick = function () {//确定退出
+                    mask.style.display = 'none'
+                    out.style.display = 'none'
+                    zh.style.display = 'none'
+                    tLogin.children[0].innerText = '登录/注册'
+                    location.reload()
+                    tLogin.onclick = function () {
+                        loginAdd()
+                    }
+                    onLine.onclick = function () {
+                        loginAdd()
+                    }
+
+                }
+            }
+        }
+        zh.onmouseleave = function () {
+            zhList.style.display = 'none'
+        }
+    } else {
+        hint.style.display = 'block';
+        hint.children[1].innerText = '你必须同意相关的条款'
+    }
+}
+
 
 

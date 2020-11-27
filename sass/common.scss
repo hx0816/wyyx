@@ -424,9 +424,53 @@ button{
         }
     }
 }
-
-
 /* 客服，返回顶部 */
+
+/* 退出登录界面 */
+#logout{
+    width: 430px;
+    height: 320px;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 99;
+    box-sizing: border-box;
+    padding-bottom: 40px;
+    padding-top: 115px;
+    background-color: #fff;
+    display: none;
+    p{
+        font-size: 18px;
+        color: #333333;
+        line-height: 18px;
+        margin-bottom: 106px;
+        text-align: center;
+    }
+    .cancel,.confirm{
+        width: 142px;
+        height: 42px;
+        border-radius: 1px;
+        box-sizing: border-box;
+        cursor: pointer;
+    }
+    .cancel{
+        border: #b1a17d 1px solid;
+        color: #b1a17d;
+        background-color: #f3f0eb;
+        margin-left: 68px;
+        margin-right: 10px;
+        &:hover{
+            background-color: #fff;
+        }
+    }
+    .confirm{
+        color: white;
+        background-color: #b1a17d;
+        border: 0;
+    }
+}
+/* 退出登录界面 */
 
 /* 顶部 */
 #title{
@@ -460,9 +504,52 @@ button{
                 vertical-align: middle;
                 cursor:pointer
             }
-            ul{
+            &>ul{
                 height: 100%;
                 line-height: 36px;
+                .title_zh{
+                    position: relative;
+                    ul{
+                        position: absolute;
+                        background-color: #fff;
+                        width: 83px;
+                        border: 1px solid #dddddd;
+                        left: 10px;
+                        z-index: 10;
+                        text-align: center;
+                        display: none;
+                        &::after{
+                            content: '';
+                            width: 0;
+                            height: 0;
+                            border-width: 6px;
+                            border-color: transparent transparent  #fffffc transparent;
+                            border-style: solid;
+                            position: absolute;
+                            left: 36px;
+                            top: -13px;
+                        }
+                        li{
+                            box-sizing: border-box;
+                            padding: 0 13px;
+                            height: 42px;
+                            line-height: 42px;
+                            a{
+                                width: 100%;
+                                margin: 0 auto;
+                                display: block;
+                                height: 100%;
+                                border-bottom: 1px solid #dddddd;
+                            }
+                            &:hover{
+                                a{
+                                    color: #b7a37d;
+                                }
+                            }
+                            
+                        }
+                    }
+                }
                 .list{
                     position:relative;
                     &:hover{
@@ -511,7 +598,7 @@ button{
                         }
                     }
                 }
-                li{
+                &>li{
                     height: 100%;
                     float: left;
                     a{

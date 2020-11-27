@@ -339,6 +339,46 @@ button {
       margin-top: 14px; }
 
 /* 客服，返回顶部 */
+/* 退出登录界面 */
+#logout {
+  width: 430px;
+  height: 320px;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 99;
+  box-sizing: border-box;
+  padding-bottom: 40px;
+  padding-top: 115px;
+  background-color: #fff;
+  display: none; }
+  #logout p {
+    font-size: 18px;
+    color: #333333;
+    line-height: 18px;
+    margin-bottom: 106px;
+    text-align: center; }
+  #logout .cancel, #logout .confirm {
+    width: 142px;
+    height: 42px;
+    border-radius: 1px;
+    box-sizing: border-box;
+    cursor: pointer; }
+  #logout .cancel {
+    border: #b1a17d 1px solid;
+    color: #b1a17d;
+    background-color: #f3f0eb;
+    margin-left: 68px;
+    margin-right: 10px; }
+    #logout .cancel:hover {
+      background-color: #fff; }
+  #logout .confirm {
+    color: white;
+    background-color: #b1a17d;
+    border: 0; }
+
+/* 退出登录界面 */
 /* 顶部 */
 #title {
   background-color: #333333;
@@ -365,21 +405,55 @@ button {
       background-color: rgba(255, 255, 255, 0.1);
       vertical-align: middle;
       cursor: pointer; }
-    #title .title_inner_nav ul {
+    #title .title_inner_nav > ul {
       height: 100%;
       line-height: 36px; }
-      #title .title_inner_nav ul .list {
+      #title .title_inner_nav > ul .title_zh {
         position: relative; }
-        #title .title_inner_nav ul .list:hover div {
+        #title .title_inner_nav > ul .title_zh ul {
+          position: absolute;
+          background-color: #fff;
+          width: 83px;
+          border: 1px solid #dddddd;
+          left: 10px;
+          z-index: 10;
+          text-align: center;
+          display: none; }
+          #title .title_inner_nav > ul .title_zh ul::after {
+            content: '';
+            width: 0;
+            height: 0;
+            border-width: 6px;
+            border-color: transparent transparent  #fffffc transparent;
+            border-style: solid;
+            position: absolute;
+            left: 36px;
+            top: -13px; }
+          #title .title_inner_nav > ul .title_zh ul li {
+            box-sizing: border-box;
+            padding: 0 13px;
+            height: 42px;
+            line-height: 42px; }
+            #title .title_inner_nav > ul .title_zh ul li a {
+              width: 100%;
+              margin: 0 auto;
+              display: block;
+              height: 100%;
+              border-bottom: 1px solid #dddddd; }
+            #title .title_inner_nav > ul .title_zh ul li:hover a {
+              color: #b7a37d; }
+      #title .title_inner_nav > ul .list {
+        position: relative; }
+        #title .title_inner_nav > ul .list:hover div {
           display: block; }
-        #title .title_inner_nav ul .list > div {
+        #title .title_inner_nav > ul .list > div {
           width: 80px;
           border: 1px solid #dddddd;
           position: absolute;
           left: 0;
           top: 36px;
           display: none; }
-          #title .title_inner_nav ul .list > div::after {
+          #title .title_inner_nav > ul .list > div::after {
             content: '';
             position: absolute;
             border-width: 7px;
@@ -387,12 +461,12 @@ button {
             border-color: transparent transparent #fffdf5 transparent;
             top: -14px;
             left: 35px; }
-          #title .title_inner_nav ul .list > div div {
+          #title .title_inner_nav > ul .list > div div {
             text-align: center;
             margin: 0 auto;
             box-sizing: border-box;
             background: white; }
-            #title .title_inner_nav ul .list > div div a {
+            #title .title_inner_nav > ul .list > div div a {
               font-size: 12px;
               color: #999999;
               display: block;
@@ -402,23 +476,23 @@ button {
               line-height: 38px;
               padding-top: 4px;
               height: 41px; }
-              #title .title_inner_nav ul .list > div div a:hover {
+              #title .title_inner_nav > ul .list > div div a:hover {
                 color: #b4a078; }
-            #title .title_inner_nav ul .list > div div .last {
+            #title .title_inner_nav > ul .list > div div .last {
               border: 0; }
-      #title .title_inner_nav ul li {
+      #title .title_inner_nav > ul > li {
         height: 100%;
         float: left; }
-        #title .title_inner_nav ul li a {
+        #title .title_inner_nav > ul > li a {
           color: #cccccc;
           font-size: 12px;
           margin-left: 10px;
           margin-right: 10px; }
-          #title .title_inner_nav ul li a:hover {
+          #title .title_inner_nav > ul > li a:hover {
             color: #fff; }
-          #title .title_inner_nav ul li a img {
+          #title .title_inner_nav > ul > li a img {
             margin-right: 10px; }
-          #title .title_inner_nav ul li a i {
+          #title .title_inner_nav > ul > li a i {
             color: rgba(255, 255, 255, 0.4);
             transform: rotateZ(90deg);
             display: inline-block;
@@ -427,11 +501,11 @@ button {
             position: relative;
             left: 10px;
             margin-right: 10px; }
-      #title .title_inner_nav ul .app {
+      #title .title_inner_nav > ul .app {
         position: relative; }
-        #title .title_inner_nav ul .app:hover div {
+        #title .title_inner_nav > ul .app:hover div {
           display: block; }
-        #title .title_inner_nav ul .app div {
+        #title .title_inner_nav > ul .app div {
           background-color: #fff;
           display: none;
           padding: 10px;
@@ -440,7 +514,7 @@ button {
           position: absolute;
           left: -42px;
           top: 36px; }
-          #title .title_inner_nav ul .app div::after {
+          #title .title_inner_nav > ul .app div::after {
             content: '';
             position: absolute;
             border-width: 7px;
@@ -448,7 +522,7 @@ button {
             border-color: transparent transparent #fffdf5 transparent;
             top: -14px;
             left: 63px; }
-          #title .title_inner_nav ul .app div p {
+          #title .title_inner_nav > ul .app div p {
             font-size: 12px;
             color: #b4a078;
             text-align: center;
